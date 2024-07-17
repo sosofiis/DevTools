@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from './Input';
+import RemoveTool from './RemoveTool';
 import './style.css'
 
 const toolsDev = [
@@ -15,18 +16,18 @@ function Tools() {
         setArrayValues((arr) => [...arr, tool])
     }
 
-    // const remove = (id) => {
-    //     console.log(id);
-
-    // }
+    const remove = (id) => {
+        setArrayValues((arr) => arr.filter(tool => tool.id !== id));
+    }
 
     return (
         <>
             <Input action={addTool} data={arrayValues} />
             <ul>
                 {arrayValues.map(tool => (
-                    <li key={tool.id}> {tool.nome}
-                    {/* <span onClick={remove(tool.id)}>X</span> */}
+                    <li key={tool.id}> 
+                        {tool.nome}
+                        <RemoveTool remove={remove} id={tool.id} />
                     </li>     
                 ))}
             </ul>
