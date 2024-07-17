@@ -4,10 +4,10 @@ import RemoveTool from './RemoveTool';
 import './style.css'
 
 const toolsDev = [
-        {id: 1, nome: "gitHub"},
-        {id: 2, nome: "Slack"},
-        {id: 3, nome: "VSCode"},
-    ];
+    { id: 1, nome: "gitHub" },
+    { id: 2, nome: "Slack" },
+    { id: 3, nome: "VSCode" },
+];
 
 function Tools() {
     const [arrayValues, setArrayValues] = useState(toolsDev);
@@ -23,12 +23,15 @@ function Tools() {
     return (
         <>
             <Input action={addTool} data={arrayValues} />
-            <ul>
+            <ul className="tools-lista">
                 {arrayValues.map(tool => (
-                    <li key={tool.id}> 
-                        {tool.nome}
-                        <RemoveTool remove={remove} id={tool.id} />
-                    </li>     
+                    <div className="div-lista">
+                        <li key={tool.id} className="tool-item">
+                            {tool.nome}
+                            <RemoveTool remove={remove} id={tool.id} />
+                        </li>
+                    </div>
+
                 ))}
             </ul>
         </>

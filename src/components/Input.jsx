@@ -17,7 +17,7 @@ function Input({ action, data }) {
                 value={valor}
                 onChange={(e) => setValor(e.target.value)}
             />
-            <button className="botao" onClick={cadastrar}>Cadastrar</button>
+            <button className="botao" onClick={cadastrar}>Adicionar</button>
         </div>
 
 
