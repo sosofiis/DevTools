@@ -1,0 +1,16 @@
+.div-input{
+    display: flex;
+    gap: 15px;
+}
+
+.input{
+    height: 5vh;
+    width: 20vw;
+    border-radius: 50px;
+    border: none;
+}
+
+.botao{
+    height: 5vh;
+    
+}
