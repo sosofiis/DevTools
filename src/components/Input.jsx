@@ -14,6 +14,7 @@ function Input({ action, data }) {
             <input
                 type="text"
                 className="input"
+                placeholder="Digite aqui..."
                 value={valor}
                 onChange={(e) => setValor(e.target.value)}
             />

@@ -18,13 +18,15 @@ body {
 .div-input {
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .input {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 50px;
     width: 200px;
 }
 
@@ -44,7 +46,8 @@ body {
 .tools-lista {
     list-style-type: none;
     padding: 0;
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
     color: black;
 }
 
@@ -59,13 +62,75 @@ body {
     border-radius: 4px;
 }
 
-.remove-botao {
+.tool-buttons {
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-button{
     padding: 5px 10px;
     cursor: pointer;
-    color: white;
-    background-color: red;
     border: none;
     border-radius: 3px;
+    color: white;
+    background-color: #2B4560;
+}
+
+.edit-button:hover {
+    background-color: #182635;
+}
+
+.edit-tool{
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.save-button{
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: green;
+}
+
+.save-button:hover {
+    background-color: rgb(1, 77, 1);
+}
+
+.cancel-button{
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: red;
+}
+
+.remove-botao {
+    background-color: red;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+}
+
+.edit-input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .remove-botao:hover {
